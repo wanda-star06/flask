@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Categoria</title>
+</head>
+<body>
+    <h1>Adicionar Categoria</h1>
+    <form action="{{ url_for('add_categoria') }}" method="POST">
+        <label for="nome">Nome da Categoria:</label><br>
+        <input type="text" id="nome" name="nome" required><br>
+        <input type="submit" value="Adicionar Categoria">
+    </form>
+    <a href="{{ url_for('categorias') }}">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Livro</title>
+</head>
+<body>
+    <h1>Adicionar Livro</h1>
+    <form action="{{ url_for('add_livro') }}" method="POST">
+        <label for="titulo">Título:</label><br>
+        <input type="text" id="titulo" name="titulo" required><br>
+        <label for="autor">Autor:</label><br>
+        <input type="text" id="autor" name="autor" required><br>
+        <label for="ano">Ano:</label><br>
+        <input type="number" id="ano" name="ano" required><br>
+        <label for="genero">Gênero:</label><br>
+        <input type="text" id="genero" name="genero" required><br>
+        <label for="paginas">Páginas:</label><br>
+        <input type="number" id="paginas" name="paginas" value="0"><br>
+        <input type="submit" value="Adicionar Livro">
+    </form>
+    <a href="{{ url_for('livros') }}">Voltar</a>
+</body>
+</html>

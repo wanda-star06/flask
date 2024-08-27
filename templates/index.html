@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <h1>Bem-vindo à Biblioteca</h1>
+    <ul>
+        <li><a href="{{ url_for('livros') }}">Gerenciar Livros</a></li>
+        <li><a href="{{ url_for('usuarios') }}">Gerenciar Usuários</a></li>
+        <li><a href="{{ url_for('emprestimos') }}">Gerenciar Empréstimos</a></li>
+        <li><a href="{{ url_for('categorias') }}">Gerenciar Categorias</a></li>
+    </ul>
+</body>
+</html>

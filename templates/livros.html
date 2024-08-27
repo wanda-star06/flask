@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros</title>
+</head>
+<body>
+    <h1>Lista de Livros</h1>
+    <a href="{{ url_for('add_livro') }}">Adicionar Novo Livro</a>
+    <ul>
+        {% for livro in livros %}
+            <li>{{ livro[1] }} - {{ livro[2] }} ({{ livro[3] }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar ao Início</a>
+</body>
+</html>

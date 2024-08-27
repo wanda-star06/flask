@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+</head>
+<body>
+    <h1>Lista de Usuários</h1>
+    <a href="{{ url_for('add_usuario') }}">Adicionar Novo Usuário</a>
+    <ul>
+        {% for usuario in usuarios %}
+            <li>{{ usuario[1] }} - {{ usuario[2] }} ({{ usuario[3] }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar ao Início</a>
+</body>
+</html>

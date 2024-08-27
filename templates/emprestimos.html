@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimos</title>
+</head>
+<body>
+    <h1>Lista de Empréstimos</h1>
+    <a href="{{ url_for('add_emprestimo') }}">Adicionar Novo Empréstimo</a>
+    <ul>
+        {% for emprestimo in emprestimos %}
+            <li>Livro ID: {{ emprestimo[1] }} - Usuário ID: {{ emprestimo[2] }} - Data de Empréstimo: {{ emprestimo[3] }} - Data de Devolução: {{ emprestimo[4] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar ao Início</a>
+</body>
+</html>
